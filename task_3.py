@@ -13,3 +13,17 @@ print('Задача 3. Рамка')
 # |                 |
 # |                 |
 # |_ _ _ _ _ _ _ _ _|
+
+rows = int(input("Введите кол-во строк: "))
+cols = int(input("Введите кол-во столбцов: "))
+
+for row in range(rows):
+	for col in range(cols):
+		if col == 0 or col == cols - 1:
+			print("|", end="")
+		elif row == 0 or row == rows - 1:
+			print("-", end="")
+		else:
+			print(" ", end="")
+
+	print()

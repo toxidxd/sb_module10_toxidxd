@@ -1,6 +1,5 @@
 print('Задача 10. Яма ')
 
-
 # В одной компьютерной текстовой игре рисуются всяческие элементы ландшафта.
 #
 # Напишите программу,
@@ -13,3 +12,19 @@ print('Задача 10. Яма ')
 # 543....345
 # 5432..2345
 # 5432112345
+
+depth = int(input("Введите число: "))
+
+for level in range(1, depth + 1):
+    for x in range(-depth, depth + 1):
+        if x < 0:
+            x *= -1
+        elif x == 0:
+            continue
+
+        if level + x > depth:
+            print(x, end="")
+        else:
+            print(".", end="")
+
+    print()
